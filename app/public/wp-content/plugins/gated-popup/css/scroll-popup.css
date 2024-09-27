@@ -1,0 +1,41 @@
+/* Disable scroll when popup is open */
+body.no-scroll {
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Blur effect applied to all elements except the popup */
+body.blur-background > :not(#scroll-popup) {
+    filter: blur(5px);
+    transition: filter 0.3s ease-in-out; /* Smooth transition for the blur effect */
+}
+
+/* Popup styling */
+#scroll-popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position for the popup */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the popup */
+    background-color: #fff; /* White background for the popup */
+    z-index: 1000; /* Ensure it's on top */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    padding: 20px; /* Padding inside the popup */
+    max-width: 500px; /* Max width for the popup */
+    width: 90%; /* Full width */
+    box-sizing: border-box; /* Include padding in width calculations */
+}
+
+/* Close button styling */
+#scroll-popup-close {
+    cursor: pointer; /* Change cursor to pointer */
+    position: absolute; /* Position close button */
+    top: 10px; /* Position it at the top */
+    right: 10px; /* Position it to the right */
+}
+
+/* Style for the HubSpot form */
+#hubspot-form {
+    margin-top: 20px; /* Margin for spacing */
+}
+
+
